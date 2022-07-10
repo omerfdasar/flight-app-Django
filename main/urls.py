@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
 
 # Three modules for swagger:
 from rest_framework import permissions
@@ -14,7 +14,7 @@ schema_view = get_schema_view(
         description="Flight Reservation API project provides flight and reservation info",
         terms_of_service="#",
         # Change e-mail on this line!
-        contact=openapi.Contact(email="omerfarukdasar@gmail.com"),
+        contact=openapi.Contact(email="rafe@clarusway.com"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,
@@ -35,5 +35,5 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
 
     # apps
-    path("users/", include("users.urls"))
+    path("users/", include("users.urls")),
 ]
