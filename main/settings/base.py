@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     # myapss
     'users',
+    "flight",
 ]
 
 MIDDLEWARE = [
